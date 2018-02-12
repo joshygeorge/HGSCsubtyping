@@ -21,7 +21,7 @@ read.ncounter.normalized.data <- function(fileName)
 	sample.ids <- gsub("^([0-9])", "X\\1", sample.ids)
 	colnames(header) <- sample.ids
 	colnames(x) <- c("Code.Class","Name","Accession",sample.ids)
-	rownams(x) <- x$Name
+	rownames(x) <- x$Name
 	x <- x[,-c(1:3)]
 	return(list(exp = x, header = header))
 }
