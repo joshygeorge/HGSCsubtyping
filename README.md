@@ -81,3 +81,4 @@ This project is licensed under GPL-3
 * Inspiration
 * etc
 
+# HGSCsubtyping
