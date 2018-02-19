@@ -60,37 +60,37 @@ predict.molecular.subtype <- function(expression.matrix)
 
 predict.serous.cancer.subtype <- function(expression.matrix)
 {
-    c1.genes <- intersect(rownames(expression.matrix),serous.signature$C1.sig$symbol)
+    c1.genes <- intersect(rownames(expression.matrix),serous.signatures$C1.sig$symbol)
     C1.exp <- expression.matrix[c1.genes,]
-    C1 <- serous.signature$C1.sig
+    C1 <- serous.signatures$C1.sig
     C1.sel <- C1[C1$symbol %in% c1.genes,]
     rownames(C1.sel) <- C1.sel$symbol
     C1.ord <- C1.sel[rownames(C1.exp),]
 
-    c2.genes <- intersect(rownames(expression.matrix),serous.signature$C2.sig$symbol)
+    c2.genes <- intersect(rownames(expression.matrix),serous.signatures$C2.sig$symbol)
     C2.exp <- expression.matrix[c2.genes,]
-    C2 <- serous.signature$C2.sig
+    C2 <- serous.signatures$C2.sig
     C2.sel <- C2[C2$symbol %in% c2.genes,]
     rownames(C2.sel) <- C2.sel$symbol
     C2.ord <- C2.sel[rownames(C2.exp),]
 
-    c3.genes <- intersect(rownames(expression.matrix),serous.signature$C3.sig$symbol)
+    c3.genes <- intersect(rownames(expression.matrix),serous.signatures$C3.sig$symbol)
     C3.exp <- expression.matrix[c3.genes,]
-    C3 <- serous.signature$C3.sig
+    C3 <- serous.signatures$C3.sig
     C3.sel <- C3[C3$symbol %in% c3.genes,]
     rownames(C3.sel) <- C3.sel$symbol
     C3.ord <- C3.sel[rownames(C3.exp),]
 
-    c4.genes <- intersect(rownames(expression.matrix),serous.signature$C4.sig$symbol)
+    c4.genes <- intersect(rownames(expression.matrix),serous.signatures$C4.sig$symbol)
     C4.exp <- expression.matrix[c4.genes,]
-    C4 <- serous.signature$C4.sig
+    C4 <- serous.signatures$C4.sig
     C4.sel <- C4[C4$symbol %in% c4.genes,]
     rownames(C4.sel) <- C4.sel$symbol
     C4.ord <- C4.sel[rownames(C4.exp),]
 
-    c5.genes <- intersect(rownames(expression.matrix),serous.signature$C5.sig$symbol)
+    c5.genes <- intersect(rownames(expression.matrix),serous.signatures$C5.sig$symbol)
     C5.exp <- expression.matrix[c5.genes,]
-    C5 <- serous.signature$C5.sig
+    C5 <- serous.signatures$C5.sig
     C5.sel <- C5[C5$symbol %in% c5.genes,]
     rownames(C5.sel) <- C5.sel$symbol
     C5.ord <- C5.sel[rownames(C5.exp),]
