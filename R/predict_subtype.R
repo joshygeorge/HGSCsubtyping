@@ -119,7 +119,7 @@ predict.serous.cancer.subtype <- function(expression.matrix)
     subtype.prob <- sweep(subtype.prob,1,r.sum,"/")
     ind <- apply(subtype.scores, 1, which.max)
     subclasses <- colnames(subtype.scores)[ind]
-    subclasses <- factor(subclasses, levels = c("C2", "C4", C3","C5","C1"))
+    subclasses <- factor(subclasses, levels = c("C2", "C4", "C3","C5","C1"))
     return(list(subtypes = subclasses, subtype.scores = subtype.scores, subtype.prob = subtype.prob))
 }
 
